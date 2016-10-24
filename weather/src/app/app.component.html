@@ -1,4 +1,12 @@
 <div>
-  <app-temperature></app-temperature>
-  <app-statistics></app-statistics>
+  <h1>Hot Weather Widget</h1>
+  <div class="element">
+    <div class="element-left">
+      <app-details [data]="data"></app-details>
+    </div>
+    <div class="element-right">
+      <app-temperature></app-temperature>
+      <app-statistics></app-statistics>
+    </div>
+  </div>
 </div>

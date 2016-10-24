@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemperatureComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
