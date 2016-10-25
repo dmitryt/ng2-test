@@ -1,8 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
-class StoreItem {
-  title: string;
-}
+import { StoreItem } from '../models';
 
 class TypeItem {
   key: string;
@@ -22,6 +19,7 @@ class Data {
 export class DetailsComponent implements OnInit {
   @Input() data:Data;
   selectedType:string;
+  selectedItem:StoreItem;
   store:Array<StoreItem>;
 
   ngOnInit() {
@@ -34,6 +32,10 @@ export class DetailsComponent implements OnInit {
   setType(type:string) :void {
     this.selectedType = type;
     this.store = this.data.store[this.selectedType];
+  }
+
+  setSelected(item:StoreItem) {
+    this.selectedItem = item;
   }
 
 }

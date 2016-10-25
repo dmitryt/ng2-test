@@ -1,5 +1,5 @@
 <div>
-<div class="element-bg-img"><img src="assets/images/1.jpg" alt="" class="img-responsive"> </div>
+<div class="element-bg-img"><img src={{selectedItem?.img?.lg}} alt="" class="img-responsive"> </div>
 <div class="element-left-bottom">
   <div class="ele-strip">
     <ul>
@@ -17,16 +17,17 @@
      <span class="line"> </span>
        <div class="activity_box">
         <div class="scrollbar" id="style-2">
-           <div class="activity-row" *ngFor="let item of store">
+           <div class="activity-row" *ngFor="let item of store" (click)="setSelected(item)">
              <div class="activity-desc">
               <h5>Title</h5>
               <p>{{item.title}}</p>
-              <h6>Tel:+1285 968 685</h6>
+              <h6>Tel:{{item.phone}}</h6>
              </div>
              <div class="activity-img">
                <ul>
-              <li><img src='assets/images/res.jpg'  alt=""/></li>
-              <li><img src='assets/images/r1.jpg'  alt=""/></li>
+                 <li *ngFor="let img of item.img.sm">
+                   <img src={{img}}  alt=""/>
+                 </li>
               </ul>
               </div>
               <div class="clear"> </div>

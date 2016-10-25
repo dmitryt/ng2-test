@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StoreItem } from './models';
 
 import fixtures from './fixtures';
 
@@ -8,6 +9,7 @@ import fixtures from './fixtures';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  selectedItem:StoreItem;
   title = 'app works!';
   data = fixtures;
 }
