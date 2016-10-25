@@ -17,7 +17,11 @@
      <span class="line"> </span>
        <div class="activity_box">
         <div class="scrollbar" id="style-2">
-           <div class="activity-row" *ngFor="let item of store" (click)="setSelected(item)">
+           <div class="activity-row"
+              *ngFor="let item of store"
+              (click)="selectItem(item)"
+              [style.backgroundColor]="item.id === selectedItem?.id ? 'gray' : 'white'"
+            >
              <div class="activity-desc">
               <h5>Title</h5>
               <p>{{item.title}}</p>

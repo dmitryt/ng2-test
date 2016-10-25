@@ -12,4 +12,8 @@ export class AppComponent {
   selectedItem:StoreItem;
   title = 'app works!';
   data = fixtures;
+
+  onSelectItem(item:StoreItem) {
+    this.selectedItem = item;
+  }
 }

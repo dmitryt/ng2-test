@@ -7,6 +7,7 @@ export default {
   store: {
     hotels: [
       {
+        id: 11,
         title: 'Hotel Nikko',
         phone: '+1285 968 685',
         stats: { following: 3244, followers: 3211 },
@@ -21,6 +22,7 @@ export default {
         }
       },
       {
+        id: 12,
         title: 'Hampshire Hotel',
         phone: '+2115 134 987',
         stats: { following: 1124, followers: 5111 },
@@ -35,6 +37,7 @@ export default {
         }
       },
       {
+        id: 13,
         title: 'Hotel Okura',
         phone: '+3448 234 992',
         stats: { following: 1244, followers: 1221 },
@@ -51,6 +54,7 @@ export default {
     ],
     fishing: [
       {
+        id: 21,
         title: 'Kaikoura Fishing Tour',
         phone: '+5532 988 222',
         stats: { following: 1442, followers: 1211 },
@@ -65,6 +69,7 @@ export default {
         }
       },
       {
+        id: 22,
         title: 'Irish Fishing Tour',
         phone: '+2344 879 999',
         stats: { following: 3341, followers: 1232 },
@@ -79,6 +84,7 @@ export default {
         }
       },
       {
+        id: 23,
         title: 'Scott Martin Fishing Tour',
         phone: '+1233 442 221',
         stats: { following: 1341, followers: 5232 },
@@ -95,6 +101,7 @@ export default {
     ],
     travels: [
       {
+        id: 31,
         title: 'Tanzania Travel Tour',
         phone: '+1223 442 222',
         stats: { following: 3141, followers: 8232 },
@@ -109,6 +116,7 @@ export default {
         }
       },
       {
+        id: 32,
         title: 'Egypt Travel Tour',
         phone: '+1222 444 222',
         stats: { following: 1141, followers: 2442 },
@@ -123,6 +131,7 @@ export default {
         }
       },
       {
+        id: 33,
         title: 'Tanzania Travel Tour',
         phone: '+2242 221 123',
         stats: { following: 2341, followers: 8232 },

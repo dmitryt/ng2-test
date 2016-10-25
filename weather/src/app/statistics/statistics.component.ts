@@ -7,7 +7,7 @@ import { StoreItem } from '../models';
   styleUrls: ['./statistics.component.css']
 })
 export class StatisticsComponent implements OnInit {
-  @Input() item:StoreItem;
+  @Input() selectedItem:StoreItem;
   constructor() {
 
   }

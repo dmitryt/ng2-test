@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { StoreItem } from '../models';
 
 class TypeItem {
@@ -18,14 +18,24 @@ class Data {
 })
 export class DetailsComponent implements OnInit {
   @Input() data:Data;
+  @Input() selectedItem:StoreItem;
+  @Output() setSelected;
+
   selectedType:string;
-  selectedItem:StoreItem;
   store:Array<StoreItem>;
 
+  constructor() {
+    this.setSelected = new EventEmitter();
+  }
+
   ngOnInit() {
-    let selectedItem = this.data.types[0];
-    if (selectedItem) {
-      this.setType(selectedItem.key);
+    let selectedType = this.data.types[0];
+    if (selectedType) {
+      this.setType(selectedType.key);
+      let selectedItem = this.store[0];
+      if (selectedItem) {
+        this.selectItem(selectedItem);
+      }
     }
   }
 
@@ -34,8 +44,8 @@ export class DetailsComponent implements OnInit {
     this.store = this.data.store[this.selectedType];
   }
 
-  setSelected(item:StoreItem) {
-    this.selectedItem = item;
+  selectItem(item) {
+    this.setSelected.emit(item);
   }
 
 }

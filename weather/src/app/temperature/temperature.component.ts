@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { StoreItem } from '../models';
 
 @Component({
   selector: 'app-temperature',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./temperature.component.css']
 })
 export class TemperatureComponent implements OnInit {
-  @Input() item:StoreItem;
+  @Input() selectedItem:StoreItem;
   constructor() { }
 
   ngOnInit() {

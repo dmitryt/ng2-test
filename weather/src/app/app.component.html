@@ -2,11 +2,15 @@
   <h1>Hot Weather Widget</h1>
   <div class="element">
     <div class="element-left">
-      <app-details [data]="data"></app-details>
+      <app-details
+        [data]="data"
+        [selectedItem]="selectedItem"
+        (setSelected)="onSelectItem($event)"
+      ></app-details>
     </div>
     <div class="element-right">
-      <app-temperature [item]="selectedItem"></app-temperature>
-      <app-statistics [item]="selectedItem"></app-statistics>
+      <app-temperature [selectedItem]="selectedItem"></app-temperature>
+      <app-statistics [selectedItem]="selectedItem"></app-statistics>
     </div>
   </div>
 </div>
